@@ -1,0 +1,80 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    min-height: calc(100vh - 40px);
+    padding: 20px;
+}
+
+.drink-icon {
+    font-size: 90px;
+    margin-bottom: 20px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.not-found-container h1 {
+    font-size: 8rem;
+    color: #ff6f61;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.not-found-container h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.not-found-container p {
+    color: #666;
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.home-btn {
+    background-color: #ff6f61;
+    color: white;
+    text-decoration: none;
+
+    padding: 14px 32px;
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.home-btn:hover {
+    background-color: #ff4d4d;
+    transform: translateY(-2px);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@media (max-width: 768px) {
+    .not-found-container h1 {
+        font-size: 5rem;
+    }
+
+    .not-found-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .drink-icon {
+        font-size: 70px;
+    }
+}

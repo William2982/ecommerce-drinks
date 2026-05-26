@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    position: relative;
+    user-select: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Search bar */
+.search-bar {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px;
+    width: 80%;
+}
+
+.search-bar button {
+    background-color: #ff6f61;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    right: 0;
+    top: 0;
+}
+
+.search-bar button:hover {
+    background-color: #ff4d4d;
+}
+
+/* Card products */
+.card-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    transition: transform 0.5s ease;
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 16px;
+}
+
+.card:hover {
+    transition: all 1.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+    border-bottom: solid #ddd 1px;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 18px;
+    width: 100%;
+}
+
+.card img:hover {
+    transition: all 0.7s;
+    scale: 1.02;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.card .price {
+    display: block;
+    color: #000;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card .rating {
+    color: #f39c12;
+    font-size: 1.1em;
+}
+
+.card .add-to-cart {
+    transition: background-color 0.3s ease;
+    background-color: #ff6f61;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.card .add-to-cart:hover {
+    background-color: #ff4d4d;
+}
+
+/* Pagination buttons */
+.pagination {
+    justify-content: space-between;
+    pointer-events: none;
+    position: fixed;
+    display: flex;
+    bottom: 50%;
+    width: 100%;
+}
+
+.pagination button {
+    transition: background-color 0.3s ease;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    pointer-events: all;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 10px;
+    padding: 15px;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+.pagination button:disabled {
+    background-color: #f4f4f4;
+    cursor: not-allowed;
+}
+
+.pagination button svg {
+    height: 20px;
+    width: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.modal-content {
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    max-width: 600px;
+    padding: 20px;
+    width: 80%;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content .close {
+    position: absolute;
+    cursor: pointer;
+    font-size: 24px;
+    right: 10px;
+    top: 10px;
+}
+
+.modal-content .cart-item {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.modal-content .cart-item button {
+    background-color: #ff6f61;
+    cursor: pointer;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.modal-content .cart-item button:hover {
+    background-color: #ff4d4d;
+}
+
+/* Cart counter */
+.cart-count {
+    background-color: #ff6f61;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    line-height: 20px;
+    font-size: 14px;
+    min-width: 20px;
+    padding: 5px;
+    right: -5px;
+    top: -5px;
+}
